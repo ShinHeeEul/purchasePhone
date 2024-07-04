@@ -11,9 +11,9 @@ public class Main {
 
 
         phoneController.buyPhone(jobs, Logo.APPLE);
-        jobs.turnOnPhone();
+        phoneController.turnOnPhone(jobs, jobs.getPhone());
 
         phoneController.buyPhone(jaeDragon, Logo.GALAXY);
-        jaeDragon.turnOnPhone();
+        phoneController.turnOnPhone(jaeDragon, jaeDragon.getPhone());
     }
 }

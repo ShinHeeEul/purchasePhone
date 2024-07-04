@@ -18,10 +18,8 @@ public class User {
         this.phone = phone;
     }
 
-    public void turnOnPhone() {
-        print(name + "님이 "+ phone.getLogo() + "폰을 켰습니다.");
-        print(phone.load());
-        print("\n");
+    public Phone getPhone() {
+        return phone;
     }
 
     public String getName() {

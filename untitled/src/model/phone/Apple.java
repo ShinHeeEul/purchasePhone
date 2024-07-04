@@ -4,15 +4,16 @@ import model.Logo;
 
 public class Apple implements Phone{
 
-    private static final String logo = Logo.APPLE.getLogo();
+    private static final String LOGO = Logo.APPLE.getLogo();
+    private static final String LOADING = Logo.APPLE.getLoading();
 
     @Override
     public String getLogo() {
-        return logo;
+        return LOGO;
     }
 
     @Override
     public String load() {
-        return "@@@ 폰 켜지는 중 @@@";
+        return LOADING;
     }
 }
