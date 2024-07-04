@@ -6,6 +6,7 @@ public class Galaxy implements Phone{
 
     private static final String LOGO = Logo.GALAXY.getLogo();
     private static final String LOADING = Logo.GALAXY.getLoading();
+
     @Override
     public String getLogo() {
         return LOGO;
