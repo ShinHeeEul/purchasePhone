@@ -16,7 +16,7 @@ public class User {
         this.name = name;
     }
 
-    public boolean checkPassword(String hen) {
+    public boolean checkHen(String hen) {
         return Objects.equals(hashPassword(hen), this.hen);
     }
 

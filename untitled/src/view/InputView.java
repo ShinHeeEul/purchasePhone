@@ -18,10 +18,10 @@ public class InputView {
     public static int inputInt() {
         Scanner sc = new Scanner(System.in);
         printInputMessage();
-        if(!sc.hasNextInt()) {
-            throw new UserException("정수를 넣어주세요.");
+        if(sc.hasNextInt()) {
+            return sc.nextInt();
         }
-        return sc.nextInt();
+        throw new UserException("정수를 넣어주세요.");
     }
 
     public static void printInputMessage() {

@@ -25,19 +25,17 @@ public class UserDAO {
 
     public void update(User user) throws UserException {
         String id = user.getId();
-        if(db.get(id) != null){
-            db.put(id, user);
-            return;
+        if(db.get(id) == null){
+            throw new UserException("해당 ID를 가진 유저가 없습니다. 업데이트 할 수 없습니다");
         }
-        throw new UserException("해당 ID를 가진 유저가 없습니다. 업데이트 할 수 없습니다");
+        db.put(id, user);
     }
 
     public void delete(User user) throws UserException {
         String id = user.getId();
-        if(db.get(id) != null){
-            db.put(id, null);
-            return;
+        if(db.get(id) == null){
+            throw new UserException("해당 ID를 가진 유저가 없습니다. 제거 할 수 없습니다");
         }
-        throw new UserException("해당 ID를 가진 유저가 없습니다. 제거 할 수 없습니다");
+        db.put(id, null);
     }
 }

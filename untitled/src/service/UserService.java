@@ -17,17 +17,17 @@ public class UserService {
     public User login(String id, String hen) throws UserException {
         Optional<User> selectedOptionalUser = userDAO.selectUserById(id);
         User selectedUser = selectedOptionalUser.orElseThrow(() -> new UserException("ID가 일치하지 않습니다."));
-        if(!selectedUser.checkPassword(hen)) {
-            throw new UserException("비밀번호가 일치하지 않습니다.");
+        if(selectedUser.checkHen(hen)) {
+            return selectedUser;
         }
-        return selectedUser;
+        throw new UserException("비밀번호가 일치하지 않습니다.");
     }
 
     public void update(User updatedUser) throws UserException {
         userDAO.update(updatedUser);
     }
 
-    public void remove(User currentUser) throws UserException {
+    public void delete(User currentUser) throws UserException {
         userDAO.delete(currentUser);
     }
 }

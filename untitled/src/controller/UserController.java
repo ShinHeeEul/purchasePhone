@@ -39,7 +39,7 @@ public class UserController {
     }
 
     public void deleteAccount(User currentUser) throws UserException {
-        userService.remove(currentUser);
+        userService.delete(currentUser);
         printDeleteAccount(currentUser.getName());
     }
 

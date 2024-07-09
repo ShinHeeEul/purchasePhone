@@ -12,9 +12,10 @@ public class UserManagementApplication {
     public static void startApplication() {
         while(true) {
             try {
-                if(!displayUserManagementMenu()) {
-                    return;
+                if(displayUserManagementMenu()) {
+                    continue;
                 }
+                return;
             } catch(UserException e) {
                 printMessage(e.getMessage());
             } catch(Exception e) {
