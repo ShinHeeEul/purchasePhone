@@ -1,7 +1,5 @@
 package model.user;
 
-import model.phone.Phone;
-
 import java.util.Objects;
 
 import static utils.SecurityUtils.hashPassword;
