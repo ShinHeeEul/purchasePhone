@@ -49,5 +49,33 @@ public class UserController {
         }
     }
 
+    public static void printSignUpInit() {
+        printMessage("가입하실 이름과 아이디, 비밀번호를 (띄어쓰기로 구분하여) 입력하세요.");
+    }
+
+    public static void printLoginInit() {
+        printMessage("아이디와 비밀번호를 (띄어쓰기로 구분하여) 입력하세요.");
+    }
+
+    public static void printUpdateInit() {
+        printMessage("업데이트할 이름과 비밀번호를 (띄어쓰기로 구분하여) 입력하세요.");
+    }
+
+    public static void printSignUpResult(String name) {
+        printMessage(name + "님의 가입을 환영합니다.");
+    }
+
+    public static void printLoginResult(String name) {
+        printMessage(name + "님 어서오세요.");
+    }
+
+    public static void printUpdateResult(String name) {
+        printMessage(name + "님의 회원정보가 업데이트되었습니다.");
+    }
+
+    public static void printDeleteAccount(String name) {
+        printMessage(name + "님의 정보가 제거되었습니다.");
+    }
+
 
 }

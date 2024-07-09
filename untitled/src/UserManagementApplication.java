@@ -3,7 +3,6 @@ import exception.UserException;
 import model.user.User;
 
 import static view.InputView.inputInt;
-import static view.OutputView.*;
 import static view.OutputView.printMessage;
 
 public class UserManagementApplication {
@@ -61,4 +60,10 @@ public class UserManagementApplication {
     private static void hasCurrentUser() {
         if(currentUser == null) throw new UserException("로그인 상태가 아닙니다.");
     }
+
+    public static void printMenuInit() {
+        printMessage("1. 회원 가입 / 2. 로그인 / 3. 회원정보 수정 / 4. 탈퇴 / 0.종료");
+    }
+
+
  }
